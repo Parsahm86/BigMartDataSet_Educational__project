@@ -12,16 +12,14 @@ from sklearn.metrics import root_mean_squared_error, r2_score, make_scorer
 from sklearn.linear_model import LinearRegression,SGDRegressor, Ridge, ElasticNet
 from xgboost import XGBRFRegressor
 from sklearn.ensemble import RandomForestRegressor
-
 # ---------------------------
 
-# --------> download & load the DataSet
+# -----------------------------------> download & load the DataSet
 
 # Install dependencies as needed:
 # pip install kagglehub[pandas-datasets]
 import kagglehub
 from kagglehub import KaggleDatasetAdapter
-
 # Set the path to the file you'd like to load
 file_path = "bigmart.csv"
 path = kagglehub.dataset_download("yasserh/bigmartsalesdataset")
@@ -35,8 +33,7 @@ df = kagglehub.load_dataset(
   # documenation for more information:
   # https://github.com/Kaggle/kagglehub/blob/main/README.md#kaggledatasetadapterpandas
 )
-
-# ---------------------------------------> fix the DataSet
+# -----------------------------------> fix the DataSet
 
 # ---------> fill null values with mode, mean
 
@@ -90,7 +87,7 @@ df['Outlet_Location_Type'] = encoder_ordinal.fit_transform(df[['Outlet_Location_
 
 df['Outlet_Size'] = encoder_ordinal.fit_transform(df[['Outlet_Size']])
 
-# ----------------------------> model
+# -----------------------------------> model
 
 # ---------> Creat X,y
 
@@ -156,7 +153,7 @@ rcParams['ps.fonttype'] = 42
 # plt.title('RMSE Comparison')
 # plt.show()
 
-# ------------> run the model
+# --------------------------> run the model
 xgb_reg = XGBRFRegressor()
 
 # ------------> random search for the Best hyperParm
@@ -181,7 +178,7 @@ random_search = RandomizedSearchCV(
     random_state=42
 )
 
-# ----------> train the model
+# -------------> train the model
 random_search.fit(X_train, y_train)
 
 # cv_results = pd.DataFrame(random_search.cv_results_)
