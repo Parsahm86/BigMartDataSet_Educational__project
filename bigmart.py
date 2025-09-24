@@ -26,11 +26,7 @@ from kagglehub import KaggleDatasetAdapter
 
 # Set the path to the file you'd like to load
 file_path = "bigmart.csv"
-
-# Download latest version
 path = kagglehub.dataset_download("yasserh/bigmartsalesdataset")
-
-print("Path to dataset files:", path)
 # Load the latest version
 df = kagglehub.load_dataset(
   KaggleDatasetAdapter.PANDAS,
