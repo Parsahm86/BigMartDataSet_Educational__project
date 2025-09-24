@@ -13,8 +13,6 @@ from sklearn.linear_model import LinearRegression,SGDRegressor, Ridge, ElasticNe
 from xgboost import XGBRFRegressor
 from sklearn.ensemble import RandomForestRegressor
 
-# hello seko
-
 # ---------------------------
 
 # --------> download & load the DataSet
