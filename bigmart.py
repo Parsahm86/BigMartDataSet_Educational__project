@@ -13,10 +13,8 @@ from sklearn.linear_model import LinearRegression,SGDRegressor, Ridge, ElasticNe
 from xgboost import XGBRFRegressor
 from sklearn.ensemble import RandomForestRegressor
 # ---------------------------
-print('llllllll')
-print('hello world')
-# -----------------------------------> download & load the DataSet
 
+# -----------------------------------> download & load the DataSet
 # Install dependencies as needed:
 # pip install kagglehub[pandas-datasets]
 import kagglehub
