@@ -1,9 +1,10 @@
 # add packages
 import numpy as np
 import pandas as pd
-from matplotlib import rcParams
-import matplotlib.pyplot as plt
 import seaborn as sns
+import matplotlib.pyplot as plt
+
+from matplotlib import rcParams
 from scipy.stats import randint, uniform
 
 from sklearn.preprocessing import LabelEncoder, OneHotEncoder, OrdinalEncoder, StandardScaler
@@ -120,7 +121,7 @@ X_test = scale.transform(X_test)
 #     y_pred = model.predict(X_test)
 
 #     print(f"r2_score {name}: {r2_score(y_test, y_pred)}")
-#     print(f"MSE {name}: {root_mean_squared_error(y_test, y_pred)}")
+#     print(f"RMSE {name}: {root_mean_squared_error(y_test, y_pred)}")
 #     r2_sc = r2_score(y_test, y_pred)
 #     RMSE = root_mean_squared_error(y_test, y_pred)
 #     results.append({
